@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <meta charset="utf-8"> 
+        <link rel="stylesheet" href="login.css">
+        <title>login page</title>
+        </head>
+        <body>
+            <div class="container">
+                
+                <form action="#" method="GET" class="login"> 
+                    <fieldset class='sigin'>
+                        <div class="inputs">
+                            <label for="name">NAME:</label>
+                            <input type="text" name ='NAME'  id="name" placeholder="e.g sarmulad"/>
+                        </div>
+                        
+                        <div class="inputs">
+                            <label for="password">PASSWORD:</label>
+                            <input type="password" name ='pasword'  id="password"/>     
+                        </div class="inputs">
+                        <div class="inputs">
+                            <input type="submit" name ='NAME' value="login" id="submit" onclick="formfunc()"/>
+                        </div>
+                        <div>
+                            <p id = "alert"></p>
+                        </div>
+                        <div>
+                            <p class="customer">Not yet an existing customer ? <a href="" target="_blank" class="register">register</a> </p>
+                        </div> 
+                    </fieldset>
+                </form>
+            </div>
+            <script>
+               function formfunc(){
+                var name = document.getElementById("name").value;
+                var password = document.getElementById("password").value;
+
+                if(name == "" ){
+                    document.getElementById("alert").textContent = 'please enter a valid name';
+                    return;
+                }
+                    
+                if(name.length < 5){
+                    document.getElementById("alert").textContent = 'please enter a name longer than 5 characters';
+                    return;
+                }
+                if(password == "" ){
+                    document.getElementById("alert").textContent = 'please enter a valid password';
+                    return;
+                }
+                    
+                if(password.length < 5){
+                    document.getElementById("alert").textContent = 'please enter a password longer than 5 characters';
+                    return;
+                }
+
+
+                }
+                
+               
+            </script>
+        </body>
+    </html>
